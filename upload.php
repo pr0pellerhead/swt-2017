@@ -25,6 +25,9 @@ if($size >= 300 * 1024){
 	exit();
 }
 
+$random_prefix = rand(1000000000, 9999999999);
+$filename = $random_prefix.'_'.$filename;
+
 move_uploaded_file($tmp, 'uploads/'.$filename);
 
 ?>
